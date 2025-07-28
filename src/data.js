@@ -1,7 +1,8 @@
-import HeroImage from "./assets/hero-img.webp";
-
+import HeroImage from "./assets/adit-img.jpg";
+import GithubImage from "./assets/github-img.png";
 const Image = {
   HeroImage,
+  GithubImage,
 };
 
 export default Image;
