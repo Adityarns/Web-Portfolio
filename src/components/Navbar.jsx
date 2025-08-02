@@ -50,7 +50,13 @@ export default function Navbar() {
       </ul>
       <ul>
         <li>
-          <img src={DataImage.GithubImage} alt="GithubImage" className="w-[30px]"/>
+          <a href="https://github.com/Adityarns">
+            <img
+              src={DataImage.GithubImage}
+              alt="GithubImage"
+              className="w-[30px]"
+            />
+          </a>
         </li>
       </ul>
     </div>
