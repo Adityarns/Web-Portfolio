@@ -1,5 +1,5 @@
 import DataImage from "./data";
-import { listTools } from "./data";
+import { listTools, listProyek } from "./data";
 import "./App.css";
 
 export default function App() {
@@ -32,25 +32,33 @@ export default function App() {
         <img
           src={DataImage.HeroImage}
           alt="Hero Image"
-          className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full object-cover mx-auto border-1"
+          className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full object-cover mx-auto border-1"
+          loading="lazy"
         />
       </div>
 
       {/* About */}
       <div className="about pt-24 px-6 max-w-7xl mx-auto">
         <div className="bg-[#0B192C] p-6 md:p-10 rounded-3xl">
-          <h1 className="text-left text-3xl md:text-4xl/tight font-bold">
+          <h1 className="text-center text-3xl md:text-4xl/tight font-bold">
             About Me
           </h1>
-          <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 items-center">
+          <div className="grid lg:grid-cols-2 grid-cols-1  pt-5 md:pt-7 items-center">
             <img
               src={DataImage.HeroImage}
               alt="Hero Image"
-              className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full object-cover mx-auto border-1"
+              className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full object-cover mx-auto border-1"
+              loading="lazy"
             />
-            <div className="md:pr-5 pt-6 md:pt-0 text-left">
+            <div className="md:pr-5 pt-6 md:pt-7 text-justify">
               <p className="text-lg md:text-2xl">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit praesentium nihil delectus eius debitis eligendi dolor maiores voluptatum, nisi earum? Earum vero totam iste minima deleniti rem. Asperiores eius incidunt beatae necessitatibus eveniet repudiandae sequi quos quisquam doloremque perspiciatis dolor dolores consequuntur nulla tenetur recusandae corporis eligendi maiores, molestiae voluptatem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+                praesentium nihil delectus eius debitis eligendi dolor maiores
+                voluptatum, nisi earum? Earum vero totam iste minima deleniti
+                rem. Asperiores eius incidunt beatae necessitatibus eveniet
+                repudiandae sequi quos quisquam doloremque perspiciatis dolor
+                dolores consequuntur nulla tenetur recusandae corporis eligendi
+                maiores, molestiae voluptatem.
               </p>
             </div>
           </div>
@@ -59,8 +67,8 @@ export default function App() {
 
       {/* Skills */}
       <div className="tools mt-32">
-        <h1 className="text-4xl/snug font-bold mb-4 text-left">Tech Stack</h1>
-        <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <h1 className="text-4xl/snug font-bold text-center">Tech Stack</h1>
+        <div className="tools-box md:mt-14 mt-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listTools.map((tool) => (
             <div
               className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
@@ -70,10 +78,45 @@ export default function App() {
                 src={tool.gambar}
                 alt="Tools Image"
                 className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900"
+                loading="lazy"
               />
               <div>
                 <h4>{tool.nama}</h4>
                 <p>{tool.ket}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Project */}
+      <div className="Project mt-32">
+        <h1 className="text-4xl/snug font-bold text-center">Project</h1>
+        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listProyek.map((proyek) => (
+            <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md">
+              <img src={proyek.gambar} alt="Proyek Image" loading="lazy" />
+              <div>
+                <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
+                <p className="text-base/loose mb-4">{proyek.desk}</p>
+                <div className="flex flex-wrap gap-2">
+                  {proyek.tools.map((tool, index) => (
+                    <p
+                      className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
+                      key={index}
+                    >
+                      {tool}
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-8 text-center">
+                  <a
+                    href="#"
+                    className="p-3 rounded-lg block border border-zinc-800 bg-[#144e94] hover:bg-[#146C94]"
+                  >
+                    More
+                  </a>
+                </div>
               </div>
             </div>
           ))}
