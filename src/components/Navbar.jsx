@@ -3,29 +3,41 @@ import DataImage from "../data";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setActive(true);
-      } else {
-        setActive(false);
-      }
+      setActive(window.scrollY > 150);
     };
     window.addEventListener("scroll", handleScroll);
-    return window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <div className="navbar flex justify-between items-center md:py-4 py-6 text-amber-50 px-1 md:px-0">
+    <div
+      className={`
+        navbar w-full z-50 px-10 flex justify-between items-center
+        py-6 md:py-4 text-amber-50 transition-all duration-300
+        md:fixed md:top-0 md:left-0 
+        md:bg-[#0A0d14]/80 md:backdrop-blur-md md:shadow-md
+      `}
+    >
       <div className="logo">
         <h1 className="text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:text-white">
           Portfolio
         </h1>
       </div>
+
       <ul
-        className={`menu flex items-center sm:gap-10 gap-4 fixed left-1/2 -translate-x-1/2 md:-translate-x-0 md:static opacity-0 md:opacity-100 
-          md:top-0 bg-white/30 backdrop-blur-md p-2 lg:pr-16 xl:pr20 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none ${
-            active ? "top-0 opacity-100" : "-top-10 opacity-0 "
-          }`}
+        className={`
+          menu flex items-center sm:gap-10 gap-4
+          transition-all duration-300
+          fixed left-1/2 -translate-x-1/2 
+          ${active ? "top-0 opacity-100" : "-top-20 opacity-0"}
+          md:static md:translate-x-0 md:top-0 md:opacity-100
+
+          bg-white/30 backdrop-blur-md rounded-br-2xl rounded-bl-2xl p-2
+          md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0
+        `}
       >
         <li>
           <a href="#home" className="text-lg font-medium">
@@ -48,7 +60,17 @@ export default function Navbar() {
           </a>
         </li>
       </ul>
-      <ul>
+
+      <ul className="flex gap-3">
+        <li>
+          <a href="https://github.com/Adityarns">
+            <img
+              src={DataImage.GithubImage}
+              alt="GithubImage"
+              className="w-[30px]"
+            />
+          </a>
+        </li>
         <li>
           <a href="https://github.com/Adityarns">
             <img

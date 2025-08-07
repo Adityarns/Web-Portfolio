@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="justify-center text-center">
       {/* Hero */}
-      <div className="hero grid lg:grid-cols-2 grid-cols-1 py-24 md:py-36 items-center xl:gap-0 gap-8 px-6 max-w-7xl mx-auto">
+      <div className="hero grid lg:grid-cols-2 grid-cols-1 py-24 md:py-36 items-center xl:gap-0 gap-8 px-6 max-w-7xl mx-auto" id="home">
         <div className="flex flex-col items-center lg:items-start justify-center text-center md:text-left">
           <p className="text-lg md:text-xl">Hello World, I'm</p>
           <h1 className="text-3xl md:text-4xl/tight font-bold mb-6">
@@ -38,7 +38,7 @@ export default function App() {
       </div>
 
       {/* About */}
-      <div className="about pt-24 px-6 max-w-7xl mx-auto">
+      <div className="about pt-24 px-6 max-w-7xl mx-auto" id="about">
         <div className="bg-[#0B192C] p-6 md:p-10 rounded-3xl">
           <h1 className="text-center text-3xl md:text-4xl/tight font-bold">
             About Me
@@ -90,7 +90,7 @@ export default function App() {
       </div>
 
       {/* Project */}
-      <div className="Project mt-32">
+      <div className="Project mt-32" id="project">
         <h1 className="text-4xl/snug font-bold text-center">Project</h1>
         <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listProyek.map((proyek) => (
@@ -124,7 +124,7 @@ export default function App() {
       </div>
 
       {/* Kontak */}
-      <div className="kontak mt-32 p-10">
+      <div className="kontak mt-32 p-10" id="contact">
         <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
         <p className="text-base/loose text-center mb-10 opacity-50">
           Mari terhubung dengan saya.

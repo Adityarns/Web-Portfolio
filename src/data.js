@@ -92,7 +92,7 @@ export const listProyek = [
     gambar: Proyek2,
     nama: "Company Profile",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper"],
     dad: "300",
   },
   {
