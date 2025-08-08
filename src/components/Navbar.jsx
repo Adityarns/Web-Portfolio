@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DataImage from "../data";
 
 export default function Navbar() {
+  const underlineClass = "md:absolute md:left-0 md:-bottom-1 md:w-full md:h-[2px] md:bg-[#144e94] md:scale-x-0 md:group-hover:scale-x-75 md:transition-transform md:origin-center md:duration-200";
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -14,6 +15,7 @@ export default function Navbar() {
 
   return (
     <div
+    
       className={`
         navbar w-full z-50 px-10 flex justify-between items-center
         py-6 md:py-4 text-amber-50 transition-all duration-300
@@ -40,23 +42,39 @@ export default function Navbar() {
         `}
       >
         <li>
-          <a href="#home" className="text-lg font-medium">
+          <a
+            href="#home"
+            className="relative group text-lg font-medium md:hover:text-[#144e94]"
+          >
             Home
+            <span className={underlineClass}></span>
           </a>
         </li>
         <li>
-          <a href="#about" className="text-lg font-medium">
+          <a
+            href="#about"
+            className="relative group text-lg font-medium md:hover:text-[#144e94]"
+          >
             About
+            <span className={underlineClass}></span>
           </a>
         </li>
         <li>
-          <a href="#project" className="text-lg font-medium">
+          <a
+            href="#project"
+            className="relative group text-lg font-medium md:hover:text-[#144e94]"
+          >
             Project
+            <span className={underlineClass}></span>
           </a>
         </li>
         <li>
-          <a href="#contact" className="text-lg font-medium">
+          <a
+            href="#contact"
+            className="relative group text-lg font-medium md:hover:text-[#144e94]"
+          >
             Contact
+            <span className={underlineClass}></span>
           </a>
         </li>
       </ul>
@@ -72,11 +90,11 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a href="https://github.com/Adityarns">
+          <a href="https://www.linkedin.com/in/aditya-rahman-syach-b9096133a/">
             <img
-              src={DataImage.GithubImage}
-              alt="GithubImage"
-              className="w-[30px]"
+              src={DataImage.LinkedinImage}
+              alt="LinkedinImage"
+              className="w-[35px]"
             />
           </a>
         </li>

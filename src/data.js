@@ -1,8 +1,10 @@
 import HeroImage from "./assets/adit-img.jpg";
 import GithubImage from "./assets/github-img.png";
+import LinkedinImage from "./assets/linkedin-img.jpeg"
 const Image = {
   HeroImage,
   GithubImage,
+  LinkedinImage
 };
 
 export default Image;
@@ -15,9 +17,6 @@ import Tools5 from "./assets/tools/bootstrap.png";
 import Tools6 from "./assets/tools/js.png";
 import Tools7 from "./assets/tools/nodejs.png";
 import Tools8 from "./assets/tools/github.png";
-import Tools9 from "./assets/tools/ai.png";
-import Tools10 from "./assets/tools/canva.png";
-import Tools11 from "./assets/tools/figma.png";
 
 export const listTools = [
   {

@@ -4,10 +4,13 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="justify-center text-center">
+    <div className="justify-center text-center pt-20" id="home">
       {/* Hero */}
-      <div className="hero grid lg:grid-cols-2 grid-cols-1 py-24 md:py-36 items-center xl:gap-0 gap-8 px-6 max-w-7xl mx-auto" id="home">
-        <div className="flex flex-col items-center lg:items-start justify-center text-center md:text-left">
+      <div
+        className="hero grid lg:grid-cols-2 grid-cols-1 py-10 md:py-40 items-center xl:gap-0 gap-5 px-6 max-w-7xl mx-auto"
+        
+      >
+        <div className="flex flex-col items-center lg:items-start justify-center text-center md:text-left lg:pl-6 xl:pl-30">
           <p className="text-lg md:text-xl">Hello World, I'm</p>
           <h1 className="text-3xl md:text-4xl/tight font-bold mb-6">
             <p>Aditya Rahman Syach</p>
@@ -22,7 +25,7 @@ export default function App() {
             </a>
             <a
               href="#project"
-              className="py-3 px-6 md:py-4 md:px-10 bg-[#144e94] hover:bg-[#146C94] rounded-3xl text-white"
+              className="py-3 px-6 md:py-4 md:px-10 bg-[#0A0d14] hover:bg-[#146C94] rounded-3xl text-white border-[#144e94] border-2"
             >
               My Projects
             </a>
@@ -32,13 +35,13 @@ export default function App() {
         <img
           src={DataImage.HeroImage}
           alt="Hero Image"
-          className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full object-cover mx-auto border-1"
+          className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full object-cover mx-auto border-[#144e94] border-3"
           loading="lazy"
         />
       </div>
 
       {/* About */}
-      <div className="about pt-24 px-6 max-w-7xl mx-auto" id="about">
+      <div className="about py-10 md:pt-40 px-6 max-w-7xl mx-auto" id="about">
         <div className="bg-[#0B192C] p-6 md:p-10 rounded-3xl">
           <h1 className="text-center text-3xl md:text-4xl/tight font-bold">
             About Me
@@ -90,7 +93,7 @@ export default function App() {
       </div>
 
       {/* Project */}
-      <div className="Project mt-32" id="project">
+      <div className="Project py-10 md:py-40" id="project">
         <h1 className="text-4xl/snug font-bold text-center">Project</h1>
         <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listProyek.map((proyek) => (
@@ -124,16 +127,13 @@ export default function App() {
       </div>
 
       {/* Kontak */}
-      <div className="kontak mt-32 p-10" id="contact">
-        <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
-        <p className="text-base/loose text-center mb-10 opacity-50">
-          Mari terhubung dengan saya.
-        </p>
+      <div className="kontak py-10 md:py-40 sm:p-10 p-0" id="contact">
+        <h1 className="text-4xl mb-8 font-bold text-center">Contact</h1>
 
         <form
           action="https://formsubmit.co/rahmansyachaditya@gmail.com"
           method="POST"
-          className="bg-zinc-800 p-10 w-fit mx-auto rounded-md"
+          className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
           autoComplete="off"
         >
           <div className="flex flex-col gap-6">
