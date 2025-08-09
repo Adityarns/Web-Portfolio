@@ -4,12 +4,9 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="justify-center text-center pt-20" id="home">
+    <div className="justify-center text-center sm:pt-10 sm:pt-20">
       {/* Hero */}
-      <div
-        className="hero grid lg:grid-cols-2 grid-cols-1 py-10 md:py-40 items-center xl:gap-0 gap-5 px-6 max-w-7xl mx-auto"
-        
-      >
+      <div className="hero grid lg:grid-cols-2 grid-cols-1 py-10 md:py-40 items-center xl:gap-0 gap-5 px-6 max-w-7xl mx-auto animate__animated animate__fadeInUp animate__delay-0.5s">
         <div className="flex flex-col items-center lg:items-start justify-center text-center md:text-left lg:pl-6 xl:pl-30">
           <p className="text-lg md:text-xl">Hello World, I'm</p>
           <h1 className="text-3xl md:text-4xl/tight font-bold mb-6">
@@ -42,7 +39,12 @@ export default function App() {
 
       {/* About */}
       <div className="about py-10 md:pt-40 px-6 max-w-7xl mx-auto" id="about">
-        <div className="bg-[#0B192C] p-6 md:p-10 rounded-3xl">
+        <div
+          className="bg-[#0B192C] p-6 md:p-10 rounded-3xl"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <h1 className="text-center text-3xl md:text-4xl/tight font-bold">
             About Me
           </h1>
@@ -69,12 +71,23 @@ export default function App() {
       </div>
 
       {/* Skills */}
-      <div className="tools mt-32">
-        <h1 className="text-4xl/snug font-bold text-center">Tech Stack</h1>
+      <div className="tools mt-32 mb-5">
+        <h1
+          className="text-4xl/snug font-bold text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Tech Stack
+        </h1>
         <div className="tools-box md:mt-14 mt-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listTools.map((tool) => (
             <div
               className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={tool.dad}
+              data-aos-once="true"
               key={tool.id}
             >
               <img
@@ -93,11 +106,26 @@ export default function App() {
       </div>
 
       {/* Project */}
-      <div className="Project py-10 md:py-40" id="project">
-        <h1 className="text-4xl/snug font-bold text-center">Project</h1>
+      <div className="Project pt-10 md:pt-40" id="project">
+        <h1
+          className="text-4xl/snug font-bold text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
+          Project
+        </h1>
         <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listProyek.map((proyek) => (
-            <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md">
+            <div
+              key={proyek.id}
+              className="p-4 bg-zinc-800 rounded-md"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={proyek.dad}
+              data-aos-once="true"
+            >
               <img src={proyek.gambar} alt="Proyek Image" loading="lazy" />
               <div>
                 <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
@@ -127,17 +155,29 @@ export default function App() {
       </div>
 
       {/* Kontak */}
-      <div className="kontak py-10 md:py-40 sm:p-10 p-0" id="contact">
-        <h1 className="text-4xl mb-8 font-bold text-center">Contact</h1>
+      <div className="kontak py-10 md:py-20 sm:p-10 p-0" id="contact">
+        <h1
+          className="text-4xl mb-8 font-bold text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
+          Contact
+        </h1>
 
         <form
           action="https://formsubmit.co/rahmansyachaditya@gmail.com"
           method="POST"
           className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
           autoComplete="off"
         >
           <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 text-left">
               <label className="font-semibold">Nama Lengkap</label>
               <input
                 type="text"
@@ -149,7 +189,7 @@ export default function App() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="font-semibold">Email</label>
+              <label className="font-semibold text-left">Email</label>
               <input
                 type="email"
                 name="email"
@@ -159,8 +199,8 @@ export default function App() {
               />
             </div>
 
-            <div class="flex flex-col gap-2">
-              <label htmlFor="pesan" class="font-semibold">
+            <div className="flex flex-col gap-2">
+              <label htmlFor="pesan" className="font-semibold text-left">
                 Pesan
               </label>
               <textarea
@@ -173,7 +213,7 @@ export default function App() {
               ></textarea>
             </div>
 
-            <div class="text-center">
+            <div className="text-center">
               <button
                 type="submit"
                 className=" p-3 rounded-lg block border border-zinc-600 bg-[#144e94] hover:bg-[#146C94]"
