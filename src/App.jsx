@@ -1,6 +1,7 @@
 import DataImage from "./data";
 import { listTools, listProyek } from "./data";
 import "./App.css";
+import GradientText from "./components/GradientText";
 
 export default function App() {
   return (
@@ -11,7 +12,14 @@ export default function App() {
           <p className="text-lg md:text-xl">Hello World, I'm</p>
           <h1 className="text-3xl md:text-4xl/tight font-bold mb-6">
             <p>Aditya Rahman Syach</p>
-            <p className="text-[#144e94]">Junior Web Developer</p>
+            <GradientText
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={5}
+              showBorder={false}
+              className="custom-class"
+            >
+              Junior Web Developer
+            </GradientText>
           </h1>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
