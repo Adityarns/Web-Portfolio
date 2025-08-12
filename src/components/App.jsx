@@ -1,7 +1,9 @@
-import DataImage from "./data";
-import { listTools, listProyek } from "./data";
+import DataImage from "../data";
+import { listTools } from "../data";
 import "./App.css";
-import GradientText from "./components/GradientText";
+import ShinyText from "./Reactbits/ShinyText";
+import GradientText from "./Reactbits/GradientText";
+import { ArrowDown } from "react-feather";
 
 export default function App() {
   return (
@@ -24,15 +26,16 @@ export default function App() {
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a
               href="#about"
-              className="py-3 px-6 md:py-4 md:px-10 bg-[#144e94] hover:bg-[#146C94] rounded-3xl text-white"
+              className="flex gap-1 py-3 px-6 md:py-4 md:px-10 bg-[#144e94] hover:bg-[#146C94] rounded-3xl text-white"
             >
+              <ArrowDown />
               About Me
             </a>
             <a
               href="#project"
               className="py-3 px-6 md:py-4 md:px-10 bg-[#0A0d14] hover:bg-[#146C94] rounded-3xl text-white border-[#144e94] border-2"
             >
-              My Projects
+              My Project
             </a>
           </div>
         </div>
@@ -124,7 +127,16 @@ export default function App() {
         >
           Project
         </h1>
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <p
+          className="text-2xl font-bold text-center py-4"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
+          Coming soon..
+        </p>
+        {/* <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listProyek.map((proyek) => (
             <div
               key={proyek.id}
@@ -159,7 +171,7 @@ export default function App() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Kontak */}
@@ -177,7 +189,7 @@ export default function App() {
         <form
           action="https://formsubmit.co/rahmansyachaditya@gmail.com"
           method="POST"
-          className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
+          className="bg-[#0B192C] p-10 sm:w-fit w-full mx-auto rounded-md"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="300"
