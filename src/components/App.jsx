@@ -1,7 +1,6 @@
 import DataImage from "../data";
 import { listTools } from "../data";
 import "./App.css";
-import ShinyText from "./Reactbits/ShinyText";
 import GradientText from "./Reactbits/GradientText";
 import { ArrowDown } from "react-feather";
 
@@ -185,7 +184,6 @@ export default function App() {
         >
           Contact
         </h1>
-
         <form
           action="https://formsubmit.co/rahmansyachaditya@gmail.com"
           method="POST"
