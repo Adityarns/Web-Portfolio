@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import DataImage from "../data";
+import { GitHub, Linkedin } from "react-feather";
 
 export default function Navbar() {
   const underlineClass =
@@ -82,20 +82,12 @@ export default function Navbar() {
       <ul className="flex gap-3">
         <li>
           <a href="https://github.com/Adityarns">
-            <img
-              src={DataImage.GithubImage}
-              alt="GithubImage"
-              className="w-[30px]"
-            />
+            <GitHub size={25} color="white" />
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/aditya-rahman-syach-b9096133a/">
-            <img
-              src={DataImage.LinkedinImage}
-              alt="LinkedinImage"
-              className="w-[35px]"
-            />
+            <Linkedin size={25} color="white" />
           </a>
         </li>
       </ul>
