@@ -1,10 +1,10 @@
 import HeroImage from "./assets/adit-img.jpg";
 import GithubImage from "./assets/github-img.png";
-import LinkedinImage from "./assets/linkedin-img.jpeg"
+import LinkedinImage from "./assets/linkedin-img.png";
 const Image = {
   HeroImage,
   GithubImage,
-  LinkedinImage
+  LinkedinImage,
 };
 
 export default Image;

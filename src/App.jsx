@@ -8,7 +8,7 @@ export default function App() {
     <div className="justify-center text-center  sm:pt-20">
       {/* Hero */}
       <div className="hero grid lg:grid-cols-2 grid-cols-1 py-10 md:py-40 items-center xl:gap-0 gap-5 px-6 max-w-7xl mx-auto animate__animated animate__fadeInUp animate__delay-0.5s">
-        <div className="flex flex-col items-center lg:items-start justify-center text-center md:text-left lg:pl-6 xl:pl-30">
+        <div className="flex flex-col items-center lg:pl-6 xl:pl-30">
           <p className="text-lg md:text-xl">Hello World, I'm</p>
           <h1 className="text-3xl md:text-4xl/tight font-bold mb-6">
             <p>Aditya Rahman Syach</p>
@@ -18,13 +18,13 @@ export default function App() {
               showBorder={false}
               className="custom-class"
             >
-              Junior Web Developer
+              Junior Developer
             </GradientText>
           </h1>
-          <div className="flex flex-wrap justify-center md:justify-start gap-4">
+          <div className="flex flex-wrap justify-center  gap-4 item-center">
             <a
               href="#about"
-              className="py-3 px-6 md:py-4 md:px-10 bg-[#144e94] hover:bg-[#146C94] rounded-3xl text-white"
+              className="py-3 px-6 md:py-4 md:px-11 bg-[#144e94] hover:bg-[#146C94] rounded-3xl text-white border-2"
             >
               About Me
             </a>

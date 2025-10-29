@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import DataImage from "../data";
 
 export default function Navbar() {
-  const underlineClass = "md:absolute md:left-0 md:-bottom-1 md:w-full md:h-[2px] md:bg-[#144e94] md:scale-x-0 md:group-hover:scale-x-75 md:transition-transform md:origin-center md:duration-200";
+  const underlineClass =
+    "md:absolute md:left-0 md:-bottom-1 md:w-full md:h-[2px] md:bg-[#144e94] md:scale-x-0 md:group-hover:scale-x-75 md:transition-transform md:origin-center md:duration-200";
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -15,7 +16,6 @@ export default function Navbar() {
 
   return (
     <div
-    
       className={`
         navbar w-full z-50 px-10 flex justify-between items-center
         py-6 md:py-4 text-amber-50 transition-all duration-300
