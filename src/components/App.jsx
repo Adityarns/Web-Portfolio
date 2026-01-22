@@ -1,70 +1,72 @@
 import DataImage from "../data";
 import { listTools } from "../data";
 import "./App.css";
-import GradientText from "./Reactbits/GradientText";
+import TextType from "./Reactbits/TextType.jsx";
 
 export default function App() {
   return (
-    <div className="justify-center text-center  sm:pt-20">
+    <div className="text-center ">
       {/* Hero */}
-      <div className="hero grid lg:grid-cols-2 grid-cols-1 py-10 md:py-40 items-center xl:gap-0 gap-5 px-6 max-w-7xl mx-auto animate__animated animate__fadeInUp animate__delay-0.5s">
-        <div className="flex flex-col items-center lg:pl-6 xl:pl-30">
-          <p className="text-lg md:text-xl">Hello World, I'm</p>
-          <h1 className="text-3xl md:text-4xl/tight font-bold mb-6">
-            <p>Aditya Rahman Syach</p>
-            <GradientText
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-              animationSpeed={5}
-              showBorder={false}
-              className="custom-class"
-            >
-              Junior Developer
-            </GradientText>
+      <div className="items-center hero grid lg:grid-cols-2 grid-cols-1 py-10 md:py-40 xl:gap-0 gap-5 px-6 max-w-7xl mx-auto animate__animated animate__fadeInUp animate__delay-0.5s">
+        <div className="flex flex-col items-start text-left lg:pl-6 xl:pl-30">
+          <p className="text-lg md:text-xl text-[#3BC1A8] font-semibold">
+            Hello World, I'm
+          </p>
+          <h1 className="mb-6">
+            <p className="text-3xl md:text-4xl/tight font-bold">
+              Aditya Rahman Syach
+            </p>
+            <TextType
+              className="text-2xl md:text-3xl/tight font-light "
+              text={[
+                "Fullstack Developer",
+                "Back-End Engineer",
+                "Data Scientist",
+              ]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor
+              cursorCharacter="_"
+              deletingSpeed={50}
+              variableSpeedEnabled={false}
+              variableSpeedMin={60}
+              variableSpeedMax={120}
+              cursorBlinkDuration={0.5}
+            />
           </h1>
           <div className="flex flex-wrap justify-center gap-4 item-center">
             <a
               href="#about"
-              className="py-3 px-6 md:py-4 md:px-11 bg-[#144e94] hover:bg-[#146C94] rounded-3xl text-white border-2"
+              className="py-3 px-6 md:py-4 md:px-11 bg-black hover:bg-white rounded-3xl text-white hover:text-black hover:border-black border-white border-2"
             >
               About Me
             </a>
             <a
               href="#project"
-              className="py-3 px-6 md:py-4 md:px-10 bg-[#0A0d14] hover:bg-[#146C94] rounded-3xl text-white border-[#144e94] border-2"
+              className="py-3 px-6 md:py-4 md:px-10 bg-black hover:bg-white rounded-3xl text-white hover:text-black hover:border-black border-white border-2"
             >
               My Project
             </a>
           </div>
         </div>
-
         <img
           src={DataImage.HeroImage}
           alt="Hero Image"
-          className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full object-cover mx-auto border-[#144e94] border-3"
+          className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full object-cover mx-auto border-black border-3"
           loading="lazy"
         />
       </div>
 
       {/* About */}
-      <div className="about py-10 md:pt-40 px-6 max-w-7xl mx-auto" id="about">
-        <div
-          className="bg-[#0B192C] p-6 md:p-10 rounded-3xl"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <h1 className="text-center text-3xl md:text-4xl/tight font-bold">
-            About Me
-          </h1>
+      <div className="about py-10 md:pt-20 px-6 max-w-7xl mx-auto" id="about">
+        <h1 className="text-center text-3xl md:text-3xl/tight font-bold text-[#3BC1A8]">
+          About Me
+        </h1>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
           <div className="grid lg:grid-cols-2 grid-cols-1  pt-5 md:pt-7 items-center">
-            <img
-              src={DataImage.HeroImage}
-              alt="Hero Image"
-              className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full object-cover mx-auto border-1"
-              loading="lazy"
-            />
-            <div className="md:pr-5 pt-6 md:pt-7 text-justify">
-              <p className="text-lg md:text-2xl">
+            <div className="md:pr-5 pt-2 md:pt-3 text-justify">
+              <h1 className="text-4xl/tight font-bold">Education</h1>
+              <p className="text-lg md:text-2xl text-black">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
                 praesentium nihil delectus eius debitis eligendi dolor maiores
                 voluptatum, nisi earum? Earum vero totam iste minima deleniti
@@ -91,7 +93,7 @@ export default function App() {
         <div className="tools-box md:mt-14 mt-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listTools.map((tool) => (
             <div
-              className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group"
+              className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-black group hover:text-white"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay={tool.dad}
