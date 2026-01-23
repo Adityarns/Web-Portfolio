@@ -4,7 +4,7 @@ import App from "./components/App.jsx";
 import Navbar from "./components/Navbar.jsx";
 import "animate.css";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css"; 
 // ..
 AOS.init();
 

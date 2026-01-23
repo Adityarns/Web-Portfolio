@@ -8,16 +8,16 @@ export default function App() {
     <div className="text-center ">
       {/* Hero */}
       <div className="items-center hero grid lg:grid-cols-2 grid-cols-1 py-10 md:py-40 xl:gap-0 gap-5 px-6 max-w-7xl mx-auto animate__animated animate__fadeInUp animate__delay-0.5s">
-        <div className="flex flex-col items-start text-left lg:pl-6 xl:pl-30">
+        <div className="flex flex-col items-start text-left mx-auto">
           <p className="text-lg md:text-xl text-[#3BC1A8] font-semibold">
             Hello World, I'm
           </p>
           <h1 className="mb-6">
             <p className="text-3xl md:text-4xl/tight font-bold">
-              Aditya Rahman Syach
+              Aditya Rahman S.
             </p>
             <TextType
-              className="text-2xl md:text-3xl/tight font-light "
+              className="text-2xl md:text-3xl/tight font-light text-[#233D4D]"
               text={[
                 "Fullstack Developer",
                 "Back-End Engineer",
@@ -34,16 +34,16 @@ export default function App() {
               cursorBlinkDuration={0.5}
             />
           </h1>
-          <div className="flex flex-wrap justify-center gap-4 item-center">
+          <div className="flex mx-auto md:mx-0 justify-center gap-4 item-center">
             <a
               href="#about"
-              className="py-3 px-6 md:py-4 md:px-11 bg-black hover:bg-white rounded-3xl text-white hover:text-black hover:border-black border-white border-2"
+              className="py-3 px-6 md:py-4 md:px-11 bg-black rounded-3xl text-white hover:text-[#3BC1A8]"
             >
               About Me
             </a>
             <a
               href="#project"
-              className="py-3 px-6 md:py-4 md:px-10 bg-black hover:bg-white rounded-3xl text-white hover:text-black hover:border-black border-white border-2"
+              className="py-3 px-6 md:py-4 md:px-10 bg-black rounded-3xl text-white hover:text-[#3BC1A8]"
             >
               My Project
             </a>
@@ -58,20 +58,40 @@ export default function App() {
       </div>
 
       {/* About */}
-      <div className="about py-10 md:pt-20 px-6 max-w-7xl mx-auto" id="about">
-        <h1 className="text-center text-3xl md:text-3xl/tight font-bold text-[#3BC1A8]">
+      <div className="about py-10 px-6 max-w-7xl mx-auto" id="about">
+        <h1 className=" text-center md:text-left text-3xl md:text-3xl/tight font-bold text-[#3BC1A8]">
           About Me
         </h1>
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-          <div className="grid lg:grid-cols-2 grid-cols-1  pt-5 md:pt-7 items-center">
-            <div className="md:pr-5 pt-2 md:pt-3 text-justify">
-              <h1 className="text-4xl/tight font-bold">Education</h1>
-              <p className="text-lg md:text-lg text-black text-left">
-                I am a 4th-semester Informatics Engineering student with a
-                strong passion for building robust and scalable systems. My
-                expertise lies in backend development, and I am currently
-                expanding my skills in data science to bridge the gap between
-                efficient data processing and meaningful insights.
+          <div className="grid lg:grid-cols-2 grid-cols-1  pt-5 md:pt-7 items-start ">
+            <div className="md:pr-5 ">
+              <h1 className="text-3xl md:text-4xl/tight font-bold text-left underline">
+                Experience
+              </h1>
+              <p className="text-sm md:text-lg text-black text-left md:text-justify">
+                In addition to my technical pursuits, I am deeply involved in
+                organizational leadership. Currently, I serve as the{" "}
+                <b>General Secretary</b> at <b>BSO Dimensi Web</b> (2025/2026),
+                where I oversee administrative efficiency and organizational
+                governance. Previously, I contributed to the Informatics
+                Engineering Student Association <b>(HIMATIF)</b> as part of the
+                Kajian Strategis dan Advokasi <b>(KASTRAD)</b> division
+                (2025/2026). In this role, I focused on student advocacy,
+                strategically communicating student perspectives to the
+                department authorities to foster a better academic environment.
+              </p>
+            </div>
+            <div>
+              <h1 className="text-3xl/tight font-bold text-left underline">
+                Education
+              </h1>
+              <p className="text-sm md:text-lg text-black text-left md:text-justify">
+                I am an undergraduate <b>Informatics Engineering </b>student at
+                <b> UIN Sunan Gunung Djati Bandung </b>, with a strong passion
+                for building robust and scalable systems. My expertise lies in
+                backend development, and I am currently expanding my skills in
+                data science to bridge the gap between efficient data processing
+                and meaningful insights.
               </p>
             </div>
           </div>
@@ -79,9 +99,9 @@ export default function App() {
       </div>
 
       {/* Skills */}
-      <div className="tools mt-32 mb-5">
+      <div className="tools  md:pt-14 px-6 max-w-7xl mx-auto">
         <h1
-          className="text-4xl/snug font-bold text-center"
+          className="text-3xl/snug font-bold text-center md:text-left text-[#3BC1A8]"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -114,9 +134,12 @@ export default function App() {
       </div>
 
       {/* Project */}
-      <div className="Project pt-10 md:pt-40" id="project">
+      <div
+        className="Project pt-10 md:pt-14 px-6 max-w-7xl mx-auto"
+        id="project"
+      >
         <h1
-          className="text-4xl/snug font-bold text-center"
+          className="text-3xl/snug font-bold text-center md:text-left text-[#3BC1A8]"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="300"
@@ -174,7 +197,7 @@ export default function App() {
       {/* Kontak */}
       <div className="kontak py-10 md:py-20 sm:p-10 p-0" id="contact">
         <h1
-          className="text-4xl mb-8 font-bold text-center"
+          className="text-3xl/snug font-bold text-center md:text-left text-[#3BC1A8]"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="300"

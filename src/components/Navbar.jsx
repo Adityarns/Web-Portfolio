@@ -19,14 +19,16 @@ export default function Navbar() {
       className={`
         navbar w-full z-50 transition-all duration-300
         md:fixed md:top-0 md:left-0 
-        md:bg-white/70 md:backdrop-blur-md md:shadow-md
+        md:bg-white/50 md:backdrop-blur-md md:shadow-md
       `}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center py-6 md:py-4 text-black">
         <div className="logo">
-          <h1 className="flex text-3xl items-center font-bold bg-white text-black p-1 md:bg-transparent md:hover:text-[#3BC1A8]">
-            Portfolio <FileText />
-          </h1>
+          <a href="#home">
+            <h1 className="flex text-3xl items-center font-bold bg-white text-black p-1 md:bg-transparent md:hover:text-[#3BC1A8]">
+              Portfolio <FileText />
+            </h1>
+          </a>
         </div>
 
         <ul
@@ -38,13 +40,13 @@ export default function Navbar() {
             md:static md:translate-x-0 md:top-0 md:opacity-100
 
             bg-white/30 backdrop-blur-md rounded-br-2xl rounded-bl-2xl p-2
-            md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0
+            md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0 
           `}
         >
           <li>
             <a
               href="#home"
-              className="relative group text-lg font-medium md:hover:text-[#3BC1A8]"
+              className="relative group text-lg font-medium hover:text-[#3BC1A8]"
             >
               Home <span className={underlineClass}></span>
             </a>
@@ -52,7 +54,7 @@ export default function Navbar() {
           <li>
             <a
               href="#about"
-              className="relative group text-lg font-medium md:hover:text-[#3BC1A8]"
+              className="relative group text-lg font-medium hover:text-[#3BC1A8]"
             >
               About <span className={underlineClass}></span>
             </a>
@@ -60,7 +62,7 @@ export default function Navbar() {
           <li>
             <a
               href="#project"
-              className="relative group text-lg font-medium md:hover:text-[#3BC1A8]"
+              className="relative group text-lg font-medium hover:text-[#3BC1A8]"
             >
               Project <span className={underlineClass}></span>
             </a>
@@ -68,7 +70,7 @@ export default function Navbar() {
           <li>
             <a
               href="#contact"
-              className="relative group text-lg font-medium md:hover:text-[#3BC1A8]"
+              className="relative group text-lg font-medium hover:text-[#3BC1A8]"
             >
               Contact <span className={underlineClass}></span>
             </a>
