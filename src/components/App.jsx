@@ -66,14 +66,12 @@ export default function App() {
           <div className="grid lg:grid-cols-2 grid-cols-1  pt-5 md:pt-7 items-center">
             <div className="md:pr-5 pt-2 md:pt-3 text-justify">
               <h1 className="text-4xl/tight font-bold">Education</h1>
-              <p className="text-lg md:text-2xl text-black">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-                praesentium nihil delectus eius debitis eligendi dolor maiores
-                voluptatum, nisi earum? Earum vero totam iste minima deleniti
-                rem. Asperiores eius incidunt beatae necessitatibus eveniet
-                repudiandae sequi quos quisquam doloremque perspiciatis dolor
-                dolores consequuntur nulla tenetur recusandae corporis eligendi
-                maiores, molestiae voluptatem.
+              <p className="text-lg md:text-lg text-black text-left">
+                I am a 4th-semester Informatics Engineering student with a
+                strong passion for building robust and scalable systems. My
+                expertise lies in backend development, and I am currently
+                expanding my skills in data science to bridge the gap between
+                efficient data processing and meaningful insights.
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GitHub, Linkedin, FileText } from "react-feather";
+import { GitHub, Linkedin, FileText, Instagram } from "react-feather";
 
 export default function Navbar() {
   const underlineClass =
@@ -24,7 +24,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center py-6 md:py-4 text-black">
         <div className="logo">
-          <h1 className="flex text-3xl items-center font-bold bg-white text-black p-1 md:bg-transparent">
+          <h1 className="flex text-3xl items-center font-bold bg-white text-black p-1 md:bg-transparent md:hover:text-[#3BC1A8]">
             Portfolio <FileText />
           </h1>
         </div>
@@ -75,15 +75,29 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <ul className="flex gap-3">
+        <ul className="flex gap-3 ">
           <li>
             <a href="https://github.com/Adityarns">
-              <GitHub size={25} color="black"/>
+              <GitHub
+                size={25}
+                className="text-black hover:text-[#3BC1A8] transition-colors duration-300"
+              />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/aditya-rahman-syach-b9096133a/">
-              <Linkedin size={25} color="black" />
+            <a
+              href="https://www.linkedin.com/in/aditya-rahman-syach"
+              className="text-black hover:text-[#3BC1A8] transition-colors duration-300"
+            >
+              <Linkedin size={25} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/adityarns_"
+              className="text-black hover:text-[#3BC1A8] transition-colors duration-300"
+            >
+              <Instagram size={25} />
             </a>
           </li>
         </ul>
