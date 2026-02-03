@@ -58,16 +58,40 @@ export default function App() {
       </div>
 
       {/* About */}
-      <div className="about py-10 px-6 max-w-7xl mx-auto" id="about">
-        <h1 className=" text-center md:text-left text-3xl md:text-3xl/tight font-bold text-[#3BC1A8]">
+      <div className="about py-10 px-6 max-w-7xl mx-auto md:px-10" id="about">
+        <h1 className=" text-center text-3xl md:text-3xl/tight font-bold text-[#3BC1A8]">
           About Me
         </h1>
         <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-          <div className="grid lg:grid-cols-2 grid-cols-1  pt-5 md:pt-7 items-start ">
+          <div className="pt-5 md:pt-7 items-start ">
+            <div className="mb-5">
+              <h1 className="text-3xl/tight font-bold text-left underline">
+                Education
+              </h1>
+              <p className="text-sm md:text-lg text-black text-left md:text-justify">
+                I am an undergraduate <b>Informatics Engineering </b>student at
+                <b> UIN Sunan Gunung Djati Bandung </b>, with a strong passion
+                for building robust and scalable systems. My expertise lies in
+                backend development, and I am currently expanding my skills in
+                data science to bridge the gap between efficient data processing
+                and meaningful insights.
+              </p>
+            </div>
             <div className="md:pr-5 ">
-              <h1 className="text-3xl md:text-4xl/tight font-bold text-left underline">
+              <h1 className="text-3xl/tight font-bold text-left underline">
                 Experience
               </h1>
+              <ul>
+                <li className="text-sm md:text-lg text-black text-left md:text-justify">
+                  <b>General Secretary</b> at <b>BSO Dimensi Web</b> (2025 -
+                  now)
+                  <p> </p>
+                </li>
+                <li className="text-sm md:text-lg text-black text-left md:text-justify">
+                  <b>Member</b> of <b>KASTRAD HIMATIF</b>
+                  (2025 - 2026)
+                </li>
+              </ul>
               <p className="text-sm md:text-lg text-black text-left md:text-justify">
                 In addition to my technical pursuits, I am deeply involved in
                 organizational leadership. Currently, I serve as the{" "}
@@ -79,19 +103,6 @@ export default function App() {
                 (2025/2026). In this role, I focused on student advocacy,
                 strategically communicating student perspectives to the
                 department authorities to foster a better academic environment.
-              </p>
-            </div>
-            <div>
-              <h1 className="text-3xl/tight font-bold text-left underline">
-                Education
-              </h1>
-              <p className="text-sm md:text-lg text-black text-left md:text-justify">
-                I am an undergraduate <b>Informatics Engineering </b>student at
-                <b> UIN Sunan Gunung Djati Bandung </b>, with a strong passion
-                for building robust and scalable systems. My expertise lies in
-                backend development, and I am currently expanding my skills in
-                data science to bridge the gap between efficient data processing
-                and meaningful insights.
               </p>
             </div>
           </div>
@@ -208,7 +219,7 @@ export default function App() {
         <form
           action="https://formsubmit.co/rahmansyachaditya@gmail.com"
           method="POST"
-          className="bg-[#0B192C] p-10 sm:w-fit w-full mx-auto rounded-md"
+          className="bg-white p-10 sm:w-fit w-full mx-auto rounded-md"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="300"
@@ -222,7 +233,7 @@ export default function App() {
                 type="text"
                 name="nama"
                 placeholder="Masukkan Nama..."
-                className="border border-zinc-500 p-2 rounded-md"
+                className="border border-black p-2 rounded-md"
                 required
               />
             </div>
@@ -233,7 +244,7 @@ export default function App() {
                 type="email"
                 name="email"
                 placeholder="Masukkan Email..."
-                className="border border-zinc-500 p-2 rounded-md"
+                className="border border-black p-2 rounded-md"
                 required
               />
             </div>
@@ -248,14 +259,14 @@ export default function App() {
                 cols="45"
                 rows="7"
                 placeholder="Pesan..."
-                className="border border-zinc-500 p-2 rounded-md required"
+                className="border border-black p-2 rounded-md required"
               ></textarea>
             </div>
 
             <div className="text-center">
               <button
                 type="submit"
-                className=" p-3 rounded-lg block border border-zinc-600 bg-[#144e94] hover:bg-[#146C94]"
+                className=" p-3 rounded-lg block border text-white bg-black hover:text-[#3BC1A8]"
               >
                 Kirim Pesan
               </button>
