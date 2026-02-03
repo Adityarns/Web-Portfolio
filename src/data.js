@@ -1,10 +1,14 @@
 import HeroImage from "./assets/adit-img.png";
-import GithubImage from "./assets/github-img.png";
-import LinkedinImage from "./assets/linkedin-img.png";
+import BsoImage from "./assets/experience/bso.jpeg";
+import HimatifImage from "./assets/experience/himatif.jpeg";
+import BsoLogo from "./assets/experience/bsoLogo.png";
+import HimatifLogo from "./assets/experience/himatifLogo.png";
 const Image = {
   HeroImage,
-  GithubImage,
-  LinkedinImage,
+  BsoImage,
+  HimatifImage,
+  BsoLogo,
+  HimatifLogo,
 };
 
 export default Image;
@@ -124,5 +128,26 @@ export const listProyek = [
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["NextJS", "TailwindCSS", "Framermotion"],
     dad: "700",
+  },
+];
+
+export const experienceData = [
+  {
+    role: "General Secretary",
+    organization: "BSO Dimensi Web",
+    period: "2025 - Present",
+    icon: Image.BsoLogo,
+    description:
+      "Oversee administrative efficiency and organizational governance, managing documentation, coordination between divisions, and ensuring smooth operational workflows.",
+    image: Image.BsoImage,
+  },
+  {
+    role: "Member",
+    organization: "KASTRAD HIMATIF",
+    period: "2025 - 2026",
+    icon: Image.HimatifLogo,
+    description:
+      "Focused on student advocacy, strategically communicating student perspectives to department authorities to foster a better academic environment.",
+    image: Image.HimatifImage,
   },
 ];
