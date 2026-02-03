@@ -2,6 +2,7 @@ import DataImage from "../data";
 import { listTools } from "../data";
 import "./App.css";
 import TextType from "./Reactbits/TextType.jsx";
+import ElectricBorder from "./Reactbits/ElectricBorder.jsx";
 
 export default function App() {
   return (
@@ -49,12 +50,15 @@ export default function App() {
             </a>
           </div>
         </div>
-        <img
-          src={DataImage.HeroImage}
-          alt="Hero Image"
-          className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full object-cover mx-auto border-black border-3"
-          loading="lazy"
-        />
+
+        <ElectricBorder color="#39f9b9" speed={1.8} chaos={0.2} thickness={8}>
+          <img
+            src={DataImage.HeroImage}
+            alt="Hero Image"
+            className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full object-cover mx-auto"
+            loading="lazy"
+          />
+        </ElectricBorder>
       </div>
 
       {/* About */}
@@ -206,7 +210,10 @@ export default function App() {
       </div>
 
       {/* Kontak */}
-      <div className="kontak py-10 md:py-20 sm:p-10 p-0" id="contact">
+      <div
+        className="kontak pt-10 md:pt-14 px-6 max-w-7xl mx-auto"
+        id="contact"
+      >
         <h1
           className="text-3xl/snug font-bold text-center md:text-left text-[#3BC1A8]"
           data-aos="fade-up"
